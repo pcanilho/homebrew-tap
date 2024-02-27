@@ -6,6 +6,6 @@ brew install pcanilho/tap/$APP
 
 ### Catalog
 
-|                    Application                    | Description                                                            | Topics     |
+|                  🔗 Application                   | Description                                                            | Topics     |
 |:-------------------------------------------------:|------------------------------------------------------------------------|------------|
 | [fav](https://github.com/pcanilho/fast-aws-vault) | `fav` is a project designed to enhance your AWS connection experience. | `aws` `go` |
