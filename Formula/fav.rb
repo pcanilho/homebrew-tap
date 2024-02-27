@@ -10,7 +10,7 @@ class Fav < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/pcanilho/fast-aws-vault/releases/download/1.0.0/fast-aws-vault_1.0.0_darwin_arm64.zip"
-      sha256 "19ee5813736fba067fe20e02884fd3d55f719f0be9487c33600d6288133f590a"
+      sha256 "b9a939a63d276709719fa868e904a4f30230ae4afb10c28d6a1c9585d91fdb7e"
 
       def install
         bin.install "fav"
@@ -18,7 +18,7 @@ class Fav < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/pcanilho/fast-aws-vault/releases/download/1.0.0/fast-aws-vault_1.0.0_darwin_amd64.zip"
-      sha256 "981528c84f09bf2efd45d3e1faf0a627b7ec121b6639474804468dc9226f8688"
+      sha256 "e790c2f88e40b3db3df2d6c0194ad4f7f3056d70ab3a706bef45c37068e7bd88"
 
       def install
         bin.install "fav"
@@ -27,17 +27,17 @@ class Fav < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/pcanilho/fast-aws-vault/releases/download/1.0.0/fast-aws-vault_1.0.0_linux_arm.zip"
-      sha256 "e91b2ad82ef84447439ea301e6188d8227a23b952d876bc7c3ec6b8dcc13334e"
+    if Hardware::CPU.intel?
+      url "https://github.com/pcanilho/fast-aws-vault/releases/download/1.0.0/fast-aws-vault_1.0.0_linux_amd64.zip"
+      sha256 "893b41b0cb58b1f872bd9c1452d4bce86dfc7629059340f4699f86fa794984fb"
 
       def install
         bin.install "fav"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/pcanilho/fast-aws-vault/releases/download/1.0.0/fast-aws-vault_1.0.0_linux_amd64.zip"
-      sha256 "8cbe74080aacfd731fc8c79d204771dba7a91f3889ce01ce79b99ed3cc0ffbb1"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/pcanilho/fast-aws-vault/releases/download/1.0.0/fast-aws-vault_1.0.0_linux_arm.zip"
+      sha256 "fd7b7ec10f9d964fee327bff380950353eecc5e404d3a986c52baeacdd83ab0d"
 
       def install
         bin.install "fav"
@@ -45,7 +45,7 @@ class Fav < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/pcanilho/fast-aws-vault/releases/download/1.0.0/fast-aws-vault_1.0.0_linux_arm64.zip"
-      sha256 "7f5e49a6b8bfd3dd9982b1710b700e6eaf1f55667214192b66661b591debf90c"
+      sha256 "f5f0e28e33d0f3d4af0399995ffbb69363701b396737e1d055630fe32ed2472f"
 
       def install
         bin.install "fav"
